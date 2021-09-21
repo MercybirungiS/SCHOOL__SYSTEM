@@ -23,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-ekx%1*5q_74esuua8pzfcm)1o^3_+xdp5vxuubl0e5j(fw5s2i'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-ekx%1*5q_74esuua8pzfcm)1o^3_+xdp5vxuubl0e5j(fw5s2i'
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','mercyschoolapp.herokuapp.com'
 ]
@@ -91,8 +91,13 @@ WSGI_APPLICATION = 'SchoolSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': BASE_DIR / 'SchoolSystem',
+        'USER': 'mercy',
+        'PASSWORD': 'mercy',
+        'HOST': 'localhost',
+        'PORT': '',
+
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=600)
