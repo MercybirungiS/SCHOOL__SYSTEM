@@ -89,8 +89,8 @@ WSGI_APPLICATION = 'SchoolSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'SchoolSystem',
-        'USER': 'mercy',
+        'NAME': 'SchoolSystem',
+        'USER': 'SchoolSystem',
         'PASSWORD': 'mercy',
         'HOST': 'localhost',
         'PORT': '',
