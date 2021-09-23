@@ -10,12 +10,12 @@ from courses.models import Courses
 # Create your views here.
 
 def home(request):
-    student=Student.objects.count()
+    # student=Student.objects.count()
     trainer=Trainer.objects.count()
     courses=Courses.objects.count()
     events=Events.objects.count()
 
-    data = {"student": student, "trainer": trainer, "course": courses ,"events":events}
+    data = { "trainer": trainer, "course": courses ,"events":events}
     return render(request, "home_page.htm", data)
 
 
