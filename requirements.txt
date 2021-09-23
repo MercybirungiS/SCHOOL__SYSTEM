@@ -1,3 +1,4 @@
+apturl==0.5.2
 asgiref==3.3.4
 Django==3.2.4
 django-heroku==0.3.1
